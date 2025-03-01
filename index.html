@@ -12,10 +12,10 @@
 <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 <link rel="stylesheet" href="style.css">
 </head>
-<body id="main-body" class="bg-blue-50">
+<body id="main-body" class="bg-[#f4f7ff]">
  <header>
     <nav class="w-11/12 mx-auto mt-5 mb-5">
-        <div class="flex bg-white justify-between p-3">
+        <div class="flex bg-white justify-between p-3 rounded-lg">
             <div class="flex items-center ml-3">
                 <div>
                     <img src="assets/logo.png" alt="">
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="flex items-center mr-3">
-                <div class="flex">
+                <div class="flex bg-[#f4f7ff] p-5 rounded-full">
                     <div>
                         <img src="assets/checkbox.png" alt="">
                     </div>
@@ -33,51 +33,53 @@
                         <h1 id="point-number" class="ml-2 font-bold text-2xl poppins text-black">23</h1>
                     </div>
                 </div>
-                <div>
-                    <img id="theme-btn" class="ml-10 cursor-pointer" src="assets/theme-btn.png" alt="">
+                <div class="bg-[#f4f7ff] p-5 rounded-full ml-10">
+                    <img id="theme-btn" class="cursor-pointer" src="assets/theme-btn.png" alt="">
                 </div>
             </div>
         </div>
     </nav>
  </header> 
  <main class="w-11/12 mx-auto">
-    <div class="flex">
-    <div class="bg-white w-3/4">
-        <div class="flex gap-3 ml-2 mr-2 mb-28">
-            <div class="flex items-center bg-gray-300 w-1/4 border  p-4">
+    <div class="flex mb-10">
+    <div class="bg-white w-3/4 rounded-lg">
+        <div class="flex gap-3 ml-2 mr-2 mb-5 mt-6">
+            <div class="flex items-center bg-[#f4f7ff] w-1/4 p-4 rounded-md">
                 <div>
                     <img src="assets/checkbox.png" alt="">
                 </div>
                 <div class="ml-3">
-                    <h1 class="text-black opacity-80 font-medium poppins">Task Assigned </h1>
+                    <h1 class="text-black opacity-90 font-medium poppins">Task Assigned </h1>
                     <h1 id="task-number" class="text-black font-bold text-xl">06</h1>
                 </div>
             </div>
-            <div class="flex items-center bg-gray-300 w-2/4 border p-4">
+            <div class="flex rounded-lg items-center bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] ... w-2/4 p-4">
                 <div>
                     <img src="assets/board.png" alt="">
                 </div>
                 <div class="ml-3">
-                    <h1 class="opacity-80 font-medium text-white poppins">Discover Something <br> New Today!</h1> 
+                    <h1 class="text-2xl cursor-pointer font-medium text-white poppins">Discover Something <br> New Today!</h1> 
                 </div>
             </div>
-            <div class="flex items-center bg-gray-300 w-1/4 border  p-4">
+            <div class="flex items-center bg-[#f4f7ff] w-1/4 rounded-lg p-4">
                 <div>
                     <img src="assets/calender.png" alt="">
                 </div>
                 <div class="ml-3">
-                    <h1 class="text-black opacity-80 font-medium poppins">Wed ,</h1>
-                    <h1 class="text-black font-bold text-xl poppins"> Jul 28 2025 </h1>
+                    <h1 id="day" class="text-black opacity-80 font-medium poppins"></h1>
+                    <h1 id="month" class="text-black font-bold text-xl poppins"></h1>
                 </div>
             </div>
         </div>
-        <div>
+        <hr class="dotted-hr">
+        <div class="mt-5">
             <div class="grid grid-cols-3 gap-3 mr-2 ml-2 mb-4">
-                <div class="bg-gray-300 pl-3 pr-3 border border-none rounded-lg">
-                    <h1 class="bg-white text-black opacity-70 mb-4 w-2/5 p-4 rounded-lg mt-4 poppins">ShopEase</h1>
-                    <h1 class="text-2xl font-medium mb-4 text-black poppins">Fix Mobile Button Issue </h1>
-                    <h1  class="bg-white p-2 text-black opacity-50 mb-4 rounded-lg">Debug using Chrome DevTools, <br> check for overlapping..</h1>
-                    <div class="flex items-center mb-4">
+                <div class="bg-[#f4f7ff] pl-3 pr-3 border border-none rounded-lg">
+                    <button class="bg-white text-black opacity-90 mb-4  p-4 rounded-lg mt-4 poppins">ShopEase</button>
+                    <h1 id="work-1" class="text-xl font-medium mb-4 text-black poppins">Fix Mobile Button Issue </h1>
+                    <h1  class="bg-white p-2 text-black opacity-50 mb-4 rounded-lg poppins text-lg">Debug using Chrome<br>DevTools,check for over..</h1>
+                    <hr class="dotted-hr">
+                    <div class="flex items-center mb-4 mt-4">
                         <div>
                             <h1 class="text-black opacity-50 poppins">Deadline</h1>
                             <h1 class="text-black font-bold poppins">
@@ -89,102 +91,111 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-300 pl-3 pr-3 border border-none rounded-lg">
-                    <h1 class="bg-white text-black opacity-70 mb-4 w-2/5 p-4 rounded-lg mt-4">CloudSync</h1>
-                    <h1 class="text-2xl font-medium mb-4 text-black poppins">Add Dark Mode</h1>
-                    <h1  class="bg-white p-2 text-black opacity-50 mb-4 rounded-lg">Debug using Chrome DevTools, <br> check for overlapping..</h1>
-                    <div class="flex items-center mb-4">
+                <div class="bg-[#f4f7ff] pl-3 pr-3 border border-none rounded-lg">
+                    <button class="bg-white text-black opacity-90 mb-4 p-4 rounded-lg mt-4">CloudSync</button>
+                    <h1 id="work-2" class="text-xl font-medium mb-4 text-black poppins">Add Dark Mode</h1>
+                    <h1  class="bg-white p-2 text-black opacity-50 mb-4 rounded-lg poppins text-lg">Debug using Chrome<br>DevTools,check for over..</h1>
+                    <hr class="dotted-hr">
+                    <div class="flex items-center mb-4 mt-4">
                         <div>
-                            <h1 class="text-black opacity-50">Deadline</h1>
-                            <h1 class="text-black font-bold">
+                            <h1 class="text-black opacity-50 poppins">Deadline</h1>
+                            <h1 class="text-black font-bold poppins">
                                 21 March 2025
                             </h1>
                         </div>
                         <div>
-                            <button class="bg-blue-800 text-white rounded-lg p-2 ml-8">Completed</button>
+                            <button id="card-2" class="bg-blue-800 text-white rounded-lg p-2 ml-8">Completed</button>
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-300 pl-3 pr-3 border border-none rounded-lg">
-                    <h1 class="bg-white text-black opacity-70 mb-4 w-2/5 p-4 rounded-lg mt-4">SwiftPay</h1>
-                    <h1 class="text-2xl font-medium mb-4 text-black poppins">Optimize  Home page</h1>
-                    <h1  class="bg-white p-2 text-black opacity-50 mb-4 rounded-lg">Debug using Chrome DevTools, <br> check for overlapping..</h1>
-                    <div class="flex items-center mb-4">
+                <div class="bg-[#f4f7ff] pl-3 pr-3 border border-none rounded-lg">
+                    <button class="bg-white text-black opacity-90 mb-4 p-4 rounded-lg mt-4">SwiftPay</button>
+                    <h1 id="work-3" class="text-xl font-medium mb-4 text-black poppins">Optimize  Home page</h1>
+                    <h1  class="bg-white p-2 text-black opacity-50 mb-4 rounded-lg poppins text-lg">Debug using Chrome<br>DevTools,check for over..</h1>
+                    <hr class="dotted-hr">
+                    <div class="flex items-center mb-4 mt-4">
                         <div>
-                            <h1 class="text-black opacity-50">Deadline</h1>
-                            <h1 class="text-black font-bold">
+                            <h1 class="text-black opacity-50 poppins">Deadline</h1>
+                            <h1 class="text-black font-bold poppins">
                                 21 March 2025
                             </h1>
                         </div>
                         <div>
-                            <button class="bg-blue-800 text-white rounded-lg p-2 ml-8">Completed</button>
+                            <button id="card-3" class="bg-blue-800 text-white rounded-lg p-2 ml-8">Completed</button>
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-300 pl-3 pr-3 border border-none rounded-lg">
-                    <h1 class="bg-white text-black opacity-70 mb-4 w-2/5 p-4 rounded-lg mt-4">Meta</h1>
-                    <h1 class="text-2xl font-medium mb-4 text-black poppins">Add new emoji 🤲</h1>
-                    <h1  class="bg-white p-2 text-black opacity-50 mb-4 rounded-lg">Debug using Chrome DevTools, <br> check for overlapping..</h1>
-                    <div class="flex items-center mb-4">
+                <div class="bg-[#f4f7ff] pl-3 pr-3 border border-none rounded-lg">
+                    <button class="bg-white text-black opacity-90 mb-4 p-4 rounded-lg mt-4">Meta</button>
+                    <h1 id="work-4" class="text-xl font-medium mb-4 text-black poppins">Add new emoji 🤲</h1>
+                    <h1  class="bg-white p-2 text-black opacity-50 mb-4 rounded-lg poppins text-lg">Debug using Chrome<br>DevTools,check for over..</h1>
+                    <hr class="dotted-hr">
+                    <div class="flex items-center mb-4 mt-4">
                         <div>
-                            <h1 class="text-black opacity-50">Deadline</h1>
-                            <h1 class="text-black font-bold">
+                            <h1 class="text-black opacity-50 poppins">Deadline</h1>
+                            <h1 class="text-black font-bold poppins">
                                 21 March 2025
                             </h1>
                         </div>
                         <div>
-                            <button class="bg-blue-800 text-white rounded-lg p-2 ml-8">Completed</button>
+                            <button id="card-4" class="bg-blue-800 text-white rounded-lg p-2 ml-8">Completed</button>
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-300 pl-3 pr-3 border border-none rounded-lg">
-                    <h1 class="bg-white text-black opacity-70 mb-4 w-3/5 p-4 rounded-lg mt-4">Google LLC</h1>
-                    <h1 class="text-2xl font-medium mb-4 text-black poppins">Integrate OpenAI API </h1>
-                    <h1  class="bg-white p-2 text-black opacity-50 mb-4 rounded-lg">Debug using Chrome DevTools, <br> check for overlapping..</h1>
-                    <div class="flex items-center mb-4">
+                <div class="bg-[#f4f7ff] pl-3 pr-3 border border-none rounded-lg">
+                    <button class="bg-white text-black opacity-90 mb-4 p-4 rounded-lg mt-4">Google LLC</button>
+                    <h1 id="work-5" class="text-xl font-medium mb-4 text-black poppins">Integrate OpenAI API </h1>
+                    <h1  class="bg-white p-2 text-black opacity-50 mb-4 rounded-lg poppins text-lg">Debug using Chrome<br>DevTools,check for over..</h1>
+                    <hr class="dotted-hr">
+                    <div class="flex items-center mb-4 mt-4">
                         <div>
-                            <h1 class="text-black opacity-50">Deadline</h1>
-                            <h1 class="text-black font-bold">
+                            <h1 class="text-black opacity-50 poppins">Deadline</h1>
+                            <h1 class="text-black font-bold poppins">
                                 21 March 2025
                             </h1>
                         </div>
                         <div>
-                            <button class="bg-blue-800 text-white rounded-lg p-2 ml-8">Completed</button>
+                            <button id="card-5" class="bg-blue-800 text-white rounded-lg p-2 ml-8">Completed</button>
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-300 pl-3 pr-3 border border-none rounded-lg">
-                    <h1 class="bg-white text-black opacity-70 mb-4 w-2/5 p-4 rounded-lg mt-4">Glassdoar</h1>
-                    <h1 class="text-2xl font-medium mb-4 text-black poppins">Improve Job searching </h1>
-                    <h1  class="bg-white p-2 text-black opacity-50 mb-4 rounded-lg">Debug using Chrome DevTools, <br> check for overlapping..</h1>
-                    <div class="flex items-center mb-4">
+                <div class="bg-[#f4f7ff] pl-3 pr-3 border border-none rounded-lg">
+                    <button class="bg-white text-black opacity-90 mb-4 p-4 rounded-lg mt-4">Glassdoar</button>
+                    <h1 id="work-6" class="text-xl font-medium mb-4 text-black poppins">Improve Job searching </h1>
+                    <h1  class="bg-white p-2 text-black opacity-50 mb-4 rounded-lg poppins text-lg">Debug using Chrome<br>DevTools,check for over..</h1>
+                    <hr class="dotted-hr">
+                    <div class="flex items-center mb-4 mt-4">
                         <div>
-                            <h1 class="text-black opacity-50">Deadline</h1>
-                            <h1 class="text-black font-bold">
+                            <h1 class="text-black opacity-50 poppins">Deadline</h1>
+                            <h1 class="text-black font-bold poppins">
                                 21 March 2025
                             </h1>
                         </div>
                         <div>
-                            <button class="bg-blue-800 text-white rounded-lg p-2 ml-8">Completed</button>
+                            <button id="card-6" class="bg-blue-800 text-white rounded-lg p-2 ml-8">Completed</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="bg-white w-1/4  border border-none items-center rounded-lg flex-col ml-5">
-        <div class="flex mt-10 mb-5 ml-16">
+    <div class="bg-white w-1/4  border border-none  rounded-lg ml-5">
+        <div class="flex mt-10 mb-5 ml-14">
             <div>
                 <img src="assets/activity.png" alt="">
             </div>
             <div><h1 class="ml-3 font-medium text-lg text-black opacity-75 poppins">Activity Log</h1></div>
         </div>
         <div>
-            <button class="ml-20 rounded-md p-3 bg-blue-600 border border-none text-white poppins mb-5">Clear History</button>
+            <button id="clear-history" class="cursor-pointer ml-16 rounded-md p-3 bg-blue-600 border border-none text-white poppins mb-5">Clear History</button>
         </div>
-        <hr>
+        <hr class="dotted-hr">
+        <div id="history" class="mt-4 ml-3 mr-3">
+            
+        </div>
     </div>
 </div>
+
  </main> 
  <script src="./scripts/main.js"></script> 
 </body>
