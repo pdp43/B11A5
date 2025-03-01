@@ -12,7 +12,7 @@
 <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-red-200">
+<body id="main-body" class="bg-blue-50">
  <header>
     <nav class="w-11/12 mx-auto mt-5 mb-5">
         <div class="flex bg-white justify-between p-3">
@@ -30,11 +30,11 @@
                         <img src="assets/checkbox.png" alt="">
                     </div>
                     <div>
-                        <h1 class="ml-2 font-bold text-2xl poppins text-black">23</h1>
+                        <h1 id="point-number" class="ml-2 font-bold text-2xl poppins text-black">23</h1>
                     </div>
                 </div>
                 <div>
-                    <img class="ml-10 cursor-pointer" src="assets/theme-btn.png" alt="">
+                    <img id="theme-btn" class="ml-10 cursor-pointer" src="assets/theme-btn.png" alt="">
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="ml-3">
                     <h1 class="text-black opacity-80 font-medium poppins">Task Assigned </h1>
-                    <h1 class="text-black font-bold text-xl">06</h1>
+                    <h1 id="task-number" class="text-black font-bold text-xl">06</h1>
                 </div>
             </div>
             <div class="flex items-center bg-gray-300 w-2/4 border p-4">
@@ -85,7 +85,7 @@
                             </h1>
                         </div>
                         <div>
-                            <button class="bg-blue-800 text-white rounded-lg p-2 ml-8">Completed</button>
+                            <button id="card-1" class="bg-blue-800 text-white rounded-lg p-2 ml-8 cursor-pointer">Completed</button>
                         </div>
                     </div>
                 </div>
