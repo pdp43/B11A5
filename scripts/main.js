@@ -2,10 +2,9 @@ let themeCount=1;
 
 document.getElementById("theme-btn").addEventListener("click",function(){
     console.log("clixked")
-   if(themeCount==3){
+   if(themeCount==6){
     themeCount=0;
-    document.getElementById("main-body").classList.remove("bg-pink-100");
-    document.getElementById("main-body").classList.remove("bg-green-50");  
+    document.getElementById("main-body").classList.remove("bg-emerald-100"); 
    }
    if(themeCount==0)
         { document.getElementById("main-body").classList.add("bg-[#f4f7ff]");
@@ -19,9 +18,23 @@ document.getElementById("theme-btn").addEventListener("click",function(){
     else if(themeCount==2)
              { document.getElementById("main-body").classList.add("bg-green-50");
                 document.getElementById("main-body").classList.remove("bg-pink-100");
-                document.getElementById("main-body").classList.remove("bg-[#f4f7ff]");
                  themeCount=themeCount+1;
                 }
+    else if(themeCount==3)
+            { document.getElementById("main-body").classList.add("bg-yellow-100");
+                 document.getElementById("main-body").classList.remove("bg-green-50");
+                 themeCount=themeCount+1;
+                 }
+    else if(themeCount==4)
+            { document.getElementById("main-body").classList.add("bg-violet-100");
+                 document.getElementById("main-body").classList.remove("bg-yellow-100");
+                 themeCount=themeCount+1;
+                 }
+    else if(themeCount==5)
+            { document.getElementById("main-body").classList.add("bg-emerald-100");
+                 document.getElementById("main-body").classList.remove("bg-violet-100");
+                 themeCount=themeCount+1;
+                 }
 });
 
 
