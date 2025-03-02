@@ -32,6 +32,11 @@ document.getElementById("day").innerText = `${week[date.getDay()]}  ,`;
 document.getElementById("month").innerText= `${month[date.getMonth()]} ${date.getDate()} ${date.getFullYear()}`
 
 
+document.getElementById("go-to-blog").addEventListener("click",function(){
+    window.location.href="./blog.html"
+})
+
+
 
 const taskNUmber = document.getElementById("task-number").innerText;
 let convertedTaskNumber = parseInt(taskNUmber);
@@ -43,16 +48,16 @@ let completedTask=0;
 
 document.getElementById("card-1").addEventListener("click",function(){
     completedTask=completedTask+1;
+    alert("Board updated successfully");
     if(completedTask===6){
-        alert("all task completed");
+        alert("congratulations!!!you have completed all current task");
     }
-    alert("card-1 done");
     convertedTaskNumber=convertedTaskNumber-1;
     convertedPointNumber=convertedPointNumber+1;
     document.getElementById("task-number").innerText =convertedTaskNumber;
     document.getElementById("point-number").innerText= convertedPointNumber;
     document.getElementById("card-1").disabled = true;
-    document.getElementById("card-1").classList.add("bg-gray-800");
+    document.getElementById("card-1").classList.add("bg-[#9BA8F8]");
     document.getElementById("card-1").classList.remove("bg-blue-800");
 
     const work = document.getElementById("work-1").innerText;
@@ -71,16 +76,16 @@ document.getElementById("card-1").addEventListener("click",function(){
 
 document.getElementById("card-2").addEventListener("click",function(){
     completedTask=completedTask+1;
+    alert("Board updated successfully");
     if(completedTask===6){
-        alert("all task completed");
+        alert("congratulations!!!you have completed all current task");
     }
-    alert("card-2 done");
     convertedTaskNumber=convertedTaskNumber-1;
     convertedPointNumber=convertedPointNumber+1;
     document.getElementById("task-number").innerText =convertedTaskNumber;
     document.getElementById("point-number").innerText= convertedPointNumber;
     document.getElementById("card-2").disabled = true;
-    document.getElementById("card-2").classList.add("bg-gray-800");
+    document.getElementById("card-2").classList.add("bg-[#9BA8F8]");
     document.getElementById("card-2").classList.remove("bg-blue-800");
 
     const work = document.getElementById("work-2").innerText;
@@ -99,16 +104,16 @@ console.log(h1.classList)
 
 document.getElementById("card-3").addEventListener("click",function(){
     completedTask=completedTask+1;
+    alert("Board updated successfully");
     if(completedTask===6){
-        alert("all task completed");
+        alert("congratulations!!!you have completed all current task");
     }
-    alert("card-3 done");
     convertedTaskNumber=convertedTaskNumber-1;
     convertedPointNumber=convertedPointNumber+1;
     document.getElementById("task-number").innerText =convertedTaskNumber;
     document.getElementById("point-number").innerText= convertedPointNumber;
     document.getElementById("card-3").disabled = true;
-    document.getElementById("card-3").classList.add("bg-gray-800");
+    document.getElementById("card-3").classList.add("bg-[#9BA8F8]");
     document.getElementById("card-3").classList.remove("bg-blue-800");
 
     const work = document.getElementById("work-3").innerText;
@@ -126,16 +131,16 @@ document.getElementById("card-3").addEventListener("click",function(){
 
 document.getElementById("card-4").addEventListener("click",function(){
     completedTask=completedTask+1;
+    alert("Board updated successfully");
     if(completedTask===6){
-        alert("all task completed");
+        alert("congratulations!!!you have completed all current task");
     }
-    alert("card-4 done");
     convertedTaskNumber=convertedTaskNumber-1;
     convertedPointNumber=convertedPointNumber+1;
     document.getElementById("task-number").innerText =convertedTaskNumber;
     document.getElementById("point-number").innerText= convertedPointNumber;
     document.getElementById("card-4").disabled = true;
-    document.getElementById("card-4").classList.add("bg-gray-800");
+    document.getElementById("card-4").classList.add("bg-[#9BA8F8]");
     document.getElementById("card-4").classList.remove("bg-blue-800");
 
     const work = document.getElementById("work-4").innerText;
@@ -153,16 +158,16 @@ document.getElementById("card-4").addEventListener("click",function(){
 
 document.getElementById("card-5").addEventListener("click",function(){
     completedTask=completedTask+1;
+    alert("Board updated successfully");
     if(completedTask===6){
-        alert("all task completed");
+        alert("congratulations!!!you have completed all current task");
     }
-    alert("card-5 done");
     convertedTaskNumber=convertedTaskNumber-1;
     convertedPointNumber=convertedPointNumber+1;
     document.getElementById("task-number").innerText =convertedTaskNumber;
     document.getElementById("point-number").innerText= convertedPointNumber;
     document.getElementById("card-5").disabled = true;
-    document.getElementById("card-5").classList.add("bg-gray-800");
+    document.getElementById("card-5").classList.add("bg-[#9BA8F8]");
     document.getElementById("card-5").classList.remove("bg-blue-800");
 
     const work = document.getElementById("work-5").innerText;
@@ -180,16 +185,16 @@ document.getElementById("card-5").addEventListener("click",function(){
 
 document.getElementById("card-6").addEventListener("click",function(){
     completedTask=completedTask+1;
+    alert("Board updated successfully");
     if(completedTask===6){
-        alert("all task completed");
+        alert("congratulations!!!you have completed all current task");
     }
-    alert("card-6 done");
     convertedTaskNumber=convertedTaskNumber-1;
     convertedPointNumber=convertedPointNumber+1;
     document.getElementById("task-number").innerText =convertedTaskNumber;
     document.getElementById("point-number").innerText= convertedPointNumber;
     document.getElementById("card-6").disabled = true;
-    document.getElementById("card-6").classList.add("bg-gray-800");
+    document.getElementById("card-6").classList.add("bg-[#9BA8F8]");
     document.getElementById("card-6").classList.remove("bg-blue-800");
 
     const work = document.getElementById("work-6").innerText;
